@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "fe22e111-923e-48ed-ba5b-e8d3d6ae906a",
+		"name": "JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[POST] JWT Colaborator",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": 3,\r\n    \"email\": \"paul@email.com\",\r\n    \"name\": \"Paul\",\r\n    \"password\": \"pass@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/auth/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[POST] JWT Director",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": 1,\r\n    \"email\": \"wayne@email.com\",\r\n    \"name\": \"Wayne\",\r\n    \"password\": \"pass@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/auth/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] List Brands",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IldheW5lIiwicm9sZSI6IkRpcmVjdG9yIiwibmJmIjoxNTk1MTk1NTEzLCJleHAiOjE1OTUyMzE1MTMsImlhdCI6MTU5NTE5NTUxM30.DrVPBGbH12FZVmjZvpgDbrB7XeIT5IjLD82bsKaPMfU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44315/api/brands",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] List Current Cars",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlBhdWwiLCJyb2xlIjoiQ29sYWJvcmF0b3IiLCJuYmYiOjE1OTUxOTU5MDYsImV4cCI6MTU5NTIzMTkwNiwiaWF0IjoxNTk1MTk1OTA2fQ.0O-dsyUJv6ZXj6Z-xlFcGkuL0_f_loHdKRB_qb0_VWI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44315/api/cars",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] List All Cars",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IldheW5lIiwicm9sZSI6IkRpcmVjdG9yIiwibmJmIjoxNTk1MTk1OTMyLCJleHAiOjE1OTUyMzE5MzIsImlhdCI6MTU5NTE5NTkzMn0.CiULWJQwj0m1LNdiZT7oEqJhl_HqQbK1CDLoAeGWypg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44315/api/cars/all",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"cars",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
